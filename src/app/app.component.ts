@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directives';
+  color1='green';
+  color2=''
 }

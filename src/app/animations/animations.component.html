@@ -1,0 +1,30 @@
+<div class="parent">
+    <div class="child">
+        <h3>Change the div size</h3>
+        <div [@changeDivSize1]=currentState1></div>
+        <button (click)="changeState1()">Change Size</button>
+    </div>
+</div>
+<div class="parent">
+    <div class="child">
+        <h3>Change the div size ballon effect </h3>
+        <div [@changeDivSize2]=currentState2 class="ballon"></div>
+        <button (click)="changeState2()">Change Size</button>
+    </div>
+</div>
+<div class="parent">
+    <div class="child">
+        <h3>Fade-In and Fade-Out animation</h3>
+
+        <button (click)="addItem()">Add List</button>
+        <button (click)="removeItem()">Remove List</button>
+        
+        <div style="width:200px; margin-left: 20px">
+          <ul>
+            <li *ngFor="let list of listItem" [@fadeInOut]>
+              {{list}}
+            </li>
+          </ul>
+        </div>
+    </div>
+</div>

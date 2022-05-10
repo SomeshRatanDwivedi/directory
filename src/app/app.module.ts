@@ -35,8 +35,11 @@ import { AnimationsComponent } from './animations/animations.component';
         component:AnimationsComponent
 
       },
+      { path: 'a', loadChildren: () => import('./a/a.module').then(m => m.AModule) },
+      { path: 'b', loadChildren: () => import('./b/b.module').then(m => m.BModule) }
     ])
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

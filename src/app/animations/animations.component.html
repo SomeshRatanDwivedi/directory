@@ -16,15 +16,34 @@
     <div class="child">
         <h3>Fade-In and Fade-Out animation</h3>
 
-        <button (click)="addItem()">Add List</button>
-        <button (click)="removeItem()">Remove List</button>
+        <button (click)="addItem1()">Add List</button>
+        <button (click)="removeItem1()">Remove List</button>
         
         <div style="width:200px; margin-left: 20px">
           <ul>
-            <li *ngFor="let list of listItem" [@fadeInOut]>
+            <li *ngFor="let list of listItem1" [@fadeInOut]>
               {{list}}
             </li>
           </ul>
         </div>
     </div>
+</div>
+<div class="parent">
+  <div class="child">
+      <h3>left-In and right-Out animation</h3>
+
+      <button (click)="addItem2()">Add List</button>
+      <button (click)="removeItem2()">Remove List</button>
+      
+      <div style="width:200px; margin-left: 20px">
+        <ul>
+          <li *ngFor="let list of listItem2" [@flyInOut]>
+            {{list}}
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="parent">
+  <h1>somesh</h1>
 </div>

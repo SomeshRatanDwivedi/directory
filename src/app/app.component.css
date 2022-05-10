@@ -7,3 +7,14 @@
     width: 100%;
     text-align: center;
 }
+a{
+    text-decoration: none;
+    margin-left: 15px;
+    color: black;
+}
+button{
+    padding: 20px;
+     color: white;
+     background-color: blue;
+     margin: 5px;
+}

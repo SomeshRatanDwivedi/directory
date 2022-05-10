@@ -17,6 +17,14 @@
 <p [appDirect2]="color2">Highlight me!</p>
   </div>
 </div>
-<a routerLink="/search">Search Component</a>
-<a routerLink="/animation">Animation</a>
+<div class="parent">
+<button routerLink="/search">Search</button>
+<button routerLink="/animation">Animation</button>
+</div>
+<div class="parent">
+  <h3>lazy-loading </h3>
+  <button style="padding: 20px; color: white; background-color: green;" routerLink="a">Load Module A</button>
+  <button style="padding: 20px; color: white; background-color: blue;" routerLink="b">Load Module B</button>-o
+</div>
+
 <router-outlet></router-outlet>

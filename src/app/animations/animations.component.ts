@@ -37,6 +37,16 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       })),
       transition('void <=> *', animate(1000)),
     ]),
+    trigger('flyInOut', [
+      state('in', style({ transform: 'translateX(0)' })),
+      transition('void => *', [
+        style({ transform: 'translateX(-100%)' }),
+        animate(1000)
+      ]),
+      transition('* => void', [
+        animate(1000, style({ transform: 'translateX(100%)' }))
+      ])
+    ])
     
   ]
 })
@@ -52,18 +62,31 @@ export class AnimationsComponent implements OnInit {
   changeState2() {
     this.currentState2 = this.currentState2 === 'initial' ? 'final' : 'initial';
   }
-  listItem:string[] = [];
-  list_order: number = 1;
+  listItem1:string[] = [];
+  list_order1: number = 1;
+  listItem2:string[] = [];
+  list_order2: number = 1;
   
-  addItem() {
-    var listitem = "ListItem " + this.list_order;
-    this.list_order++;
-    this.listItem.push(listitem);
+  addItem1() {
+    var listitem = "ListItem " + this.list_order1;
+    this.list_order1++;
+    this.listItem1.push(listitem);
   }
-  removeItem() {
-    this.listItem.length -= 1;
-    if(this.listItem.length===0){
-      this.list_order=1;
+  removeItem1() {
+    this.listItem1.length -= 1;
+    if(this.listItem1.length===0){
+      this.list_order1=1;
+    }
+  }
+  addItem2() {
+    var listitem = "ListItem " + this.list_order2;
+    this.list_order2++;
+    this.listItem2.push(listitem);
+  }
+  removeItem2() {
+    this.listItem2.length -= 1;
+    if(this.listItem2.length===0){
+      this.list_order2=1;
     }
   }
   ngOnInit(): void {
